@@ -65,12 +65,22 @@ const create = async (req,res)=>{
 }
 
 
-
-
-
-
-
-
+//Type out an explanation for this later
+const update = async (req,res)=>{
+  try{
+    const updatedPlayers = {
+      name: req.body.name,
+      foot: req.body.foot,
+      number: req.body.number,
+      rating: req.body.rating,
+    }
+    await Player.findByIdAndUpdate(req.params.id, updatedPlayers);
+    const players = await Player.find();
+    res.render(players/index, {players})
+  }catch(err){
+    console.log(err)
+  }
+}
 
 
 
@@ -93,5 +103,6 @@ module.exports = {
   new: newPlayer,
   create,
   show,
-  edit
+  edit,
+  update
 }

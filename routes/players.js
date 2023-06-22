@@ -34,6 +34,9 @@ router.get('/:id/edit', playersController.edit)
 //and it activates the create function which takes the req.body
 // and redirects the /players page with the new information
 router.post('/', playersController.create)
+
+router.put('/:id', playersController.update)
+
 //---------------------//
 
 
