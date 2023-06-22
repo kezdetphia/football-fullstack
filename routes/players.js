@@ -8,14 +8,22 @@ const playersController = require('../controllers/players')
 
 //Rendering pages:
 //---------------------//
-//When 3000/players then it renders views/players/index.ejs
+//When 3000/players 
+//It renders views/players/index.ejs where the player's list is
 router.get('/', playersController.index);
 
-//When 3000/players/new it renders a views/players/new
+//When 3000/players/new 
+//it renders the form that will trigger the post create route when submitted
 router.get('/new', playersController.new)
 
-//When 3000/players/id of a player it renders the show page
+//When 3000/players/id 
+//This gets triggered when an individual
+//player is clicked and it renders the show page
 router.get('/:id', playersController.show)
+
+//When 3000/players/id/edit 
+
+router.get('/:id/edit', playersController.edit)
 
 //---------------------//
 
