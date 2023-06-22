@@ -1,5 +1,18 @@
 <%- include('../partials/header') %>
-  <h1>playes/index</h1>
+  <p>views/players/index</P>
+
+  <% players.forEach(player => { %>
+    <ul>
+      <li> <%=player.name%></li> 
+
+    </ul>
+  
+  
+
+    
+    <% });   %>
+    
+    <a href="players/new">Add new player</a>
 
 
 <%- include('../partials/footer') %>

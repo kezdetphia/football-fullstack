@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h1>views/players/new</h1>
+
+<form action="/players" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  
+  <label for="foot">Foot:</label>
+  <select id="foot" name="foot" required>
+    <option value="left">Left</option>
+    <option value="right">Right</option>
+  </select>
+  
+  <label for="number">Number:</label>
+  <input type="number" id="number" name="number" required>
+  
+  <label for="rating">Rating:</label>
+  <input type="number" id="rating" name="rating" required>
+  
+  <input type="submit" value="Create Player">
+</form>
+
+
+
+
+<%- include('../partials/footer') %>
