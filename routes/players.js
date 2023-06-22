@@ -14,6 +14,9 @@ router.get('/', playersController.index);
 //When 3000/players/new it renders a views/players/new
 router.get('/new', playersController.new)
 
+//When 3000/players/id of a player it renders the show page
+router.get('/:id', playersController.show)
+
 //---------------------//
 
 

@@ -15,11 +15,18 @@ const index = async(req,res)=>{
   })
 }
 
-//This triggers when 3000/players/new and renders views/players/new.ejs
-const newPlayer = async(req,res)=>{
+//This gets triggered when 3000/players/new and renders views/players/new.ejs
+//This is with the create function 
+const newPlayer = async (req,res)=>{
   res.render('players/new')
 }
 
+const show = async (req,res)=>{
+  const player = await Player.findById(req.params.id)
+  res.render('players/show', {
+    players: player
+  })
+}
 
 
 //----------------//
@@ -31,7 +38,8 @@ const newPlayer = async(req,res)=>{
 
 //This function gets triggered when the post router gets triggered by a form that
 //sends information to the route thats defined in the router
-const create = async(req,res)=>{
+//This is with the newPlayer render function
+const create = async (req,res)=>{
   try{
     await Player.create(req.body);
     console.log(req.body)
@@ -68,5 +76,6 @@ const create = async(req,res)=>{
 module.exports = {
   index,
   new: newPlayer,
-  create
+  create,
+  show
 }

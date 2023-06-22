@@ -3,8 +3,9 @@
 
   <% players.forEach(player => { %>
     <ul>
-      <li> <%=player.name%></li> 
-
+      <li>
+        <a href="players/<%=player._id%>"><%=player.name%></a>
+      </li> 
     </ul>
   
   
