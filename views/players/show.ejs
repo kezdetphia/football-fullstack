@@ -1,14 +1,31 @@
 <%- include('../partials/header') %>
 
   <p>views/players/show</p>
-
-  <h4>Name : <%=players.name %></h4>
-  <h4>Footed : <%=players.foot %></h4>
-  <h4>Number : <%=players.number %></h4>
-  <h4>Rating : <%=players.rating %></h4>
-    
-
   <a href="/players/<%=players._id%>/edit">Edit this player</a>
+  
+  <div style="position: relative; background-color: #f2f2f2; padding: 20px;">
+    <div style="font-family: 'Times New Roman', serif; font-size: 18px; line-height: 1.6; color: #333; background-color: #fff; padding: 20px; border: 1px solid #ccc;">
+      <h4 style="font-weight: bold; margin-bottom: 10px;"> <%= players.name %> is a captivating and dazzling magician on the field,
+        with an unrivaled mastery of the <%= players.foot %> foot.</h4>
+      <p style="margin-bottom: 10px;">Sporting an awe-inspiring rating of <%= players.rating %>,</p>
+      <p style="margin-bottom: 10px;">this player effortlessly weaves through opponents like a nimble gazelle. Adorned with the prestigious number <%= players.number %>,</p>
+      <p style="margin-bottom: 10px;">they bring an unmatched level of finesse, power, and grace to the game. As a <%= players.position %>, they strategically orchestrate</p>
+      <p style="margin-bottom: 10px;">the flow of the match, conducting the team with impeccable vision and precision. With every touch of the ball, they create pure magic,</p>
+      <p style="margin-bottom: 10px;">leaving both fans and rivals spellbound. From audacious dribbles to jaw-dropping goals, <%= players.name %> is a true maestro of the pitch.</p>
+      <p style="margin-bottom: 10px;">Their unrivaled skills and cunning tricks make even the most skilled defenders tremble in fear.</p>
+      <p style="margin-bottom: 10px;">Prepare to be mesmerized by the sheer artistry and flair that <%= players.name %> brings to the beautiful game.</p>
+      <p style="margin-bottom: 10px;">Whether it's a flick, a pass, or a thunderous strike, they always find a way to leave a lasting impression.</p>
+      <p style="margin-bottom: 10px;">So sit back, relax, and witness the footballing brilliance of <%= players.name %> in action - an experience you won't soon forget!</p>
+    </div>
+    <div style="position: absolute; bottom: 24px; right: 850px; font-family: 'Times New Roman', serif; font-size: 14px; color: #666;">
+      <%= new Date().toLocaleDateString() %>
+  </div>
+  </div>
+  
+  
+  
+
+  
 
 
 <%- include('../partials/footer') %>

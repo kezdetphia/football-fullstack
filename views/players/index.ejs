@@ -5,6 +5,21 @@
     <ul>
       <li>
         <a href="/players/<%=player._id%>"><%=player.name%></a>
+        <br>
+        <a > Number : <%=player.number%></a>
+        <br>
+        <a > Foot : <%=player.foot%></a>
+        <br>
+        <a > Rating : <%=player.rating%></a>
+        <br>
+        <a > Position : <%=player.position%></a>
+
+
+
+        <form action="/players/<%= player._id %>?_method=DELETE" method="POST">
+          <button type="submit">X</button>
+        </form>
+        
       </li> 
     </ul>
   

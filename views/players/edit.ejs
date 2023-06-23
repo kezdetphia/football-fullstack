@@ -5,11 +5,29 @@
 <form action="/players/<%=player._id%>?_method=PUT" method="POST">
   <input type="hidden" name="_method" value="PUT">
   <input type="text" name="name" value="<%= player.name %>" placeholder="Name" required>
+
   <label for="foot">Foot:</label>
   <select id="foot" name="foot" required>
-    <option value="left" <%= player.foot%>>Left</option>
-    <option value="right" <%= player.foot %>>Right</option>
+    <option value="left" <%= player.foot === 'left' ? 'selected' : '' %>>Left</option>
+    <option value="right" <%= player.foot === 'right' ? 'selected' : '' %>>Right</option>
   </select>
+
+  <label for="position">Position:</label>
+  <select id="position" name="position" required>
+    <option value="Goalkeeper" <%= player.position === 'Goalkeeper' ? 'selected' : '' %>>Goalkeeper</option>
+    <option value="Center-Back" <%= player.position === 'Center-Back' ? 'selected' : '' %>>Center-Back</option>
+    <option value="Right-Back" <%= player.position === 'Right-Back' ? 'selected' : '' %>>Right-Back</option>
+    <option value="Left-Back" <%= player.position === 'Left-Back' ? 'selected' : '' %>>Left-Back</option>
+    <option value="Defensive-Midfielder" <%= player.position === 'Defensive-Midfielder' ? 'selected' : '' %>>Defensive-Midfielder</option>
+    <option value="Central-Midfielder" <%= player.position === 'Central-Midfielder' ? 'selected' : '' %>>Central-Midfielder</option>
+    <option value="Attacking-Midfielder" <%= player.position === 'Attacking-Midfielder' ? 'selected' : '' %>>Attacking-Midfielder</option>
+    <option value="Right-Winger" <%= player.position === 'Right-Winger' ? 'selected' : '' %>>Right-Winger</option>
+    <option value="Left-Winger" <%= player.position === 'Left-Winger' ? 'selected' : '' %>>Left-Winger</option>
+    <option value="Left-Striker" <%= player.position === 'Left-Striker' ? 'selected' : '' %>>Left-Striker</option>
+    <option value="Right-Striker" <%= player.position === 'Right-Striker' ? 'selected' : '' %>>Right-Striker</option>
+    <option value="Striker" <%= player.position === 'Striker' ? 'selected' : '' %>>Striker</option>
+</select>
+
   <input type="number" name="number" value="<%= player.number %>" placeholder="Number" required>
   <input type="number" name="rating" value="<%= player.rating %>" placeholder="Rating" required>
   <input type="submit" value="Save">

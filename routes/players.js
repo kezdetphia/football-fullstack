@@ -36,6 +36,8 @@ router.post('/', playersController.create)
 
 router.put('/:id', playersController.update)
 
+router.delete('/:id', playersController.delete)
+
 //---------------------//
 
 

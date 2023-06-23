@@ -77,6 +77,7 @@ const update = async (req,res)=>{
       foot: req.body.foot,
       number: req.body.number,
       rating: req.body.rating,
+      position: req.body.position,
     }
     await Player.findByIdAndUpdate(req.params.id, updatedPlayers);
     const players = await Player.find();
@@ -87,6 +88,15 @@ const update = async (req,res)=>{
 }
 
 
+const deletePlayer = async(req,res)=>{
+  try{
+    await Player.findByIdAndDelete(req.params.id)
+    const players = await Player.find()
+    res.render('players/index', {players})
+  }catch(err){
+    console.log(err)
+  }
+}
 
 
 
@@ -108,5 +118,6 @@ module.exports = {
   create,
   show,
   edit,
-  update
+  update,
+  delete : deletePlayer
 }
