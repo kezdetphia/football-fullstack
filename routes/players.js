@@ -3,15 +3,12 @@ var router = express.Router();
 
 const playersController = require('../controllers/players')
 
-// /players
+// // /players
 
 
 //Rendering pages:
 //---------------------//
 //When 3000/players 
-//It renders views/players/index.ejs where the player's list is
-router.get('/', playersController.index);
-
 //When 3000/players/new 
 //it renders the form that will trigger the post create route when submitted
 router.get('/new', playersController.new)
@@ -21,8 +18,10 @@ router.get('/new', playersController.new)
 //player is clicked and it renders the show page
 router.get('/:id', playersController.show)
 
-//When 3000/players/id/edit 
+//It renders views/players/index.ejs where the player's list is
+router.get('/', playersController.index);
 
+//When 3000/players/id/edit 
 router.get('/:id/edit', playersController.edit)
 
 //---------------------//
@@ -38,6 +37,15 @@ router.post('/', playersController.create)
 router.put('/:id', playersController.update)
 
 //---------------------//
+
+
+
+
+
+
+
+
+
 
 
 

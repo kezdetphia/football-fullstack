@@ -2,13 +2,13 @@
 
 <h3>views/players/edit</h3>
 
-<form action="/players/<%= player._id %>?_method=PUT" method="POST">
+<form action="/players/<%=player._id%>?_method=PUT" method="POST">
   <input type="hidden" name="_method" value="PUT">
   <input type="text" name="name" value="<%= player.name %>" placeholder="Name" required>
   <label for="foot">Foot:</label>
   <select id="foot" name="foot" required>
-    <option value="left">Left</option>
-    <option value="right">Right</option>
+    <option value="left" <%= player.foot%>>Left</option>
+    <option value="right" <%= player.foot %>>Right</option>
   </select>
   <input type="number" name="number" value="<%= player.number %>" placeholder="Number" required>
   <input type="number" name="rating" value="<%= player.rating %>" placeholder="Rating" required>

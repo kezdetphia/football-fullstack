@@ -39,10 +39,14 @@ const show = async (req,res)=>{
 //This function renders the views/players/edit.ejs
 //It passes down the single player information to the edit page
 const edit = async (req,res)=>{
-  const player = await Player.findById(req.params.id)
-  res.render('players/edit' , {
-    player
-  })
+  try{
+    const player = await Player.findById(req.params.id)
+    res.render('players/edit' , {
+      player
+    })
+  }catch(err) {
+    console.log(err)
+  }
 }
 //----------------//
 
@@ -76,7 +80,7 @@ const update = async (req,res)=>{
     }
     await Player.findByIdAndUpdate(req.params.id, updatedPlayers);
     const players = await Player.find();
-    res.render(players/index, {players})
+    res.render('players/index', {players})
   }catch(err){
     console.log(err)
   }
