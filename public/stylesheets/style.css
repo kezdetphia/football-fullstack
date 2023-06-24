@@ -1,8 +1,123 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  font-family: 'Roboto Slab', serif;
+  background-image: url(../images/backg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue
 }
 
-a {
-  color: #00B7FF;
+body a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.navbar{
+display: flex;
+justify-content: center;
+background-color: rgba(0, 100, 0, 0.1);
+}
+
+.navbar h3 a{
+  padding: 10px;
+  color: aliceblue
+};
+
+
+
+
+
+/* modal */
+.body-modal {
+	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/5c/7a/93/5c7a9388fd4cb59fcbb9fedc5fa12bd3.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+	display: none;
+	/*Set this to `none` so that the modal does not show initially on page load.*/
+}
+
+#modal-textbox {
+	background-color: rgb(159, 218, 159);
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	/*This will give the box some depth.*/
+	padding: 2%;
+	line-height: 120%;
+}
+
+#modal-footer {
+	text-align: right;
+}
+
+h1 {
+	padding-bottom: 15px;
+}
+
+.modal-buttons {
+	padding: 14px 18px;
+	background-color:  rgb(120, 181, 120);
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+}
+
+.button-container {
+  text-align: center;
+}
+
+
+
+/* player */
+.body-players-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.players li {
+  flex-basis: 30%;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.player-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 }

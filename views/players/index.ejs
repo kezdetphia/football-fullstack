@@ -1,34 +1,36 @@
 <%- include('../partials/header') %>
   <p>views/players/index</P>
 
-  <% players.forEach(player => { %>
-    <ul>
-      <li>
-        <a href="/players/<%=player._id%>"><%=player.name%></a>
-        <br>
-        <a > Number : <%=player.number%></a>
-        <br>
-        <a > Foot : <%=player.foot%></a>
-        <br>
-        <a > Rating : <%=player.rating%></a>
-        <br>
-        <a > Position : <%=player.position%></a>
-
-
-
-        <form action="/players/<%= player._id %>?_method=DELETE" method="POST">
-          <button type="submit">X</button>
-        </form>
-        
-      </li> 
-    </ul>
-  
-  
-
-    
-    <% });   %>
-    
-    <a href="/players/new">Add new player</a>
+  <div class="body-players-index">
+    <div class="players" >
+      <% players.forEach(player => { %>
+        <ul>
+          <li>
+            <img src="https://www.freeiconspng.com/uploads/adidas-football-png-9.png" alt="Football" class="player-image">
+            <h3><a href="/players/<%=player._id%>"><%=player.name%></a></h3>
+            <br>
+            <a > Number : <%=player.number%></a>
+            <br>
+            <a > Foot : <%=player.foot%></a>
+            <br>
+            <a > Rating : <%=player.rating%></a>
+            <br>
+            <a > Position : <%=player.position%></a>
+            <form action="/players/<%= player._id %>?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+            </form>
+            
+          </li> 
+        </ul>
+        <% });   %>
+    </div>
+  <a href="/players/new">Add new player</a>
+  </div>  
 
 
 <%- include('../partials/footer') %>
+
+
+
+
+
