@@ -1,33 +1,60 @@
-<%- include('./partials/header') %>
-
-<h1>Homepage</h1>
-
-<div id="homepage">
-
-
-  
-</div>
-
-
-<div class="body-modal">
-  <div class="button-container">
-    <button class="modal-buttons" id="openModal">About the Game</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Pitch</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <div class="navbar">
+    <h3><a href="/">Home</a></h3>
+    <h3><a href="/players">My Team</a></h3>
   </div>
-  <div id="modal">
-    <div id="modal-textbox">
-      <h1>How to play Football-FullStack</h1>
-      <p>In this game, you have the opportunity to create your own dream team of players and customize their attributes to build a strong and formidable squad. You can select players from a vast pool of available options and personalize their characteristics to suit your strategy and playing style.
-        Player Attributes:
-        Name: Each player has a unique name, allowing you to identify them easily.
-        Foot: You can choose whether a player is left-footed or right-footed, influencing their preferred side for passing, shooting, and dribbling.
-        Number: Assign a specific jersey number to each player, allowing them to stand out on the field.
-        Rating: Customize the player's rating or skill level, indicating their overall abilities and performance potential.</p>
-      <div id="modal-footer">
-        <button class="modal-buttons" id="close" href="#">Close</button>
+
+<div class="body-views-index">
+  <h1 id="home-h1">Home Page</h1>
+  <div class="body-modal">
+    <div class="button-container">
+      <button class="modal-buttons" id="openModal">About the Game</button>
+    </div>
+    <div id="modal">
+      <div id="modal-textbox">
+        <h1>How to play Football-FullStack</h1>
+        <p>In this game, you have the opportunity to create your own dream team
+           of players and customize their attributes to build a strong and formidable squad.
+          You can select players from a vast pool of available options and personalize
+          their characteristics to suit your strategy and playing style.
+          <br>
+          <br>
+          Player Attributes:
+          <br>
+          <br>
+          <b>-Name :</b> Each player has a unique name, allowing you to identify them easily.
+          <br>
+          <br>
+          <b>-Foot :</b> You can choose whether a player is left-footed or right-footed, influencing
+           their preferred side for passing, shooting, and dribbling.
+           <br>
+           <br>
+           <b>-Number :</b> Assign a specific jersey number to each player, allowing them 
+          to stand out on the field.
+          <br>
+          <br>
+          <b>-Rating :</b> Customize the player's rating or skill level,
+           indicating their overall abilities and performance potential.
+          </p>
+        <div id="modal-footer">
+          <button class="modal-buttons" id="close" href="#">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
+ 
+</div> 
 
 
 <script>

@@ -1,43 +1,57 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>views/players/new</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Player</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+</head>
 
-<form action="/players" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-  
-  <label for="foot">Foot:</label>
-  <select id="foot" name="foot" required>
-    <option value="left">Left</option>
-    <option value="right">Right</option>
-  </select>
-  
-  <label for="number">Number:</label>
-  <input type="number" id="number" name="number" required>
-  
-  <label for="rating">Rating:</label>
-  <input type="number" id="rating" name="rating" required>
+<body>
+  <div class="navbar">
+    <h3><a href="/">Home</a></h3>
+    <h3><a href="/players">My Team</a></h3>
+  </div>
 
-  <select id="position" name="position" required>
-    <option value="Goalkeeper">Goalkeeper</option>
-    <option value="Center-Back">Center-Back</option>
-    <option value="Right-Back">Right-Back</option>
-    <option value="Left-Back">Left-Back</option>
-    <option value="Defensive-Midfielder">Defensive-Midfielder</option>
-    <option value="Central-Midfielder">Central-Midfielder</option>
-    <option value="Attacking-Midfielder">Attacking-Midfielder</option>
-    <option value="Right-Winger">Right-Winger</option>
-    <option value="Left-Winger">Left-Winger</option>
-    <option value="Left-Striker">Left-Striker</option>
-    <option value="Right-Striker">Right-Striker</option>
-    <option value="Striker">Striker</option>
-  </select>
-  
-  <input type="submit" value="Create Player">
-</form>
+  <div class="body-players-new">
+    <div class="container-players-new">
+      <form action="/players" method="POST">
+        <label for="name">Name:</label>
+        <input placeholder="Name" type="text" id="name" name="name" required>
 
+        <label for="foot">Foot:</label>
+        <select placeholder="Foot" id="foot" name="foot" required>
+          <option value="left">Left</option>
+          <option value="right">Right</option>
+        </select>
 
+        <label for="number">Number:</label>
+        <input placeholder="Number" type="number" id="number" name="number" required>
 
+        <label for="rating">Rating:</label>
+        <input placeholder="Rating" type="number" id="rating" name="rating" required>
 
+        <select id="position" name="position" required>
+          <option value="Goalkeeper">Goalkeeper</option>
+          <option value="Center-Back">Center-Back</option>
+          <option value="Right-Back">Right-Back</option>
+          <option value="Left-Back">Left-Back</option>
+          <option value="Defensive-Midfielder">Defensive-Midfielder</option>
+          <option value="Central-Midfielder">Central-Midfielder</option>
+          <option value="Attacking-Midfielder">Attacking-Midfielder</option>
+          <option value="Right-Winger">Right-Winger</option>
+          <option value="Left-Winger">Left-Winger</option>
+          <option value="Left-Striker">Left-Striker</option>
+          <option value="Right-Striker">Right-Striker</option>
+          <option value="Striker">Striker</option>
+        </select>
 
-<%- include('../partials/footer') %>
+        <input type="submit" value="Create Player">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

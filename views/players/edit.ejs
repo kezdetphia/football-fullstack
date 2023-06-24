@@ -1,38 +1,73 @@
-<%- include('../partials/header') %>
 
-<h3>views/players/edit</h3>
+<!DOCTYPE html>
+<html lang="en">
 
-<form action="/players/<%=player._id%>?_method=PUT" method="POST">
-  <input type="hidden" name="_method" value="PUT">
-  <input type="text" name="name" value="<%= player.name %>" placeholder="Name" required>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Player</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+</head>
 
-  <label for="foot">Foot:</label>
-  <select id="foot" name="foot" required>
-    <option value="left" <%= player.foot === 'left' ? 'selected' : '' %>>Left</option>
-    <option value="right" <%= player.foot === 'right' ? 'selected' : '' %>>Right</option>
-  </select>
+<body>
+  <div class="navbar">
+    <h3><a href="/">Home</a></h3>
+    <h3><a href="/players">My Team</a></h3>
+  </div>
 
-  <label for="position">Position:</label>
-  <select id="position" name="position" required>
-    <option value="Goalkeeper" <%= player.position === 'Goalkeeper' ? 'selected' : '' %>>Goalkeeper</option>
-    <option value="Center-Back" <%= player.position === 'Center-Back' ? 'selected' : '' %>>Center-Back</option>
-    <option value="Right-Back" <%= player.position === 'Right-Back' ? 'selected' : '' %>>Right-Back</option>
-    <option value="Left-Back" <%= player.position === 'Left-Back' ? 'selected' : '' %>>Left-Back</option>
-    <option value="Defensive-Midfielder" <%= player.position === 'Defensive-Midfielder' ? 'selected' : '' %>>Defensive-Midfielder</option>
-    <option value="Central-Midfielder" <%= player.position === 'Central-Midfielder' ? 'selected' : '' %>>Central-Midfielder</option>
-    <option value="Attacking-Midfielder" <%= player.position === 'Attacking-Midfielder' ? 'selected' : '' %>>Attacking-Midfielder</option>
-    <option value="Right-Winger" <%= player.position === 'Right-Winger' ? 'selected' : '' %>>Right-Winger</option>
-    <option value="Left-Winger" <%= player.position === 'Left-Winger' ? 'selected' : '' %>>Left-Winger</option>
-    <option value="Left-Striker" <%= player.position === 'Left-Striker' ? 'selected' : '' %>>Left-Striker</option>
-    <option value="Right-Striker" <%= player.position === 'Right-Striker' ? 'selected' : '' %>>Right-Striker</option>
-    <option value="Striker" <%= player.position === 'Striker' ? 'selected' : '' %>>Striker</option>
-</select>
+  <div class="body-players-edit">
+    <div class="container-players-edit">
+      <form action="/players/<%= player._id %>?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
 
-  <input type="number" name="number" value="<%= player.number %>" placeholder="Number" required>
-  <input type="number" name="rating" value="<%= player.rating %>" placeholder="Rating" required>
-  <input type="submit" value="Save">
-</form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" value="<%= player.name %>" placeholder="Name" required>
+        </div>
 
+        <div class="form-group">
+          <label for="foot">Foot:</label>
+          <select id="foot" name="foot" required>
+            <option value="left" <%= player.foot === 'left' ? 'selected' : '' %>>Left</option>
+            <option value="right" <%= player.foot === 'right' ? 'selected' : '' %>>Right</option>
+          </select>
+        </div>
 
+        <div class="form-group">
+          <label for="position">Position:</label>
+          <select id="position" name="position" required>
+            <option value="Goalkeeper" <%= player.position === 'Goalkeeper' ? 'selected' : '' %>>Goalkeeper</option>
+            <option value="Center-Back" <%= player.position === 'Center-Back' ? 'selected' : '' %>>Center-Back</option>
+            <option value="Right-Back" <%= player.position === 'Right-Back' ? 'selected' : '' %>>Right-Back</option>
+            <option value="Left-Back" <%= player.position === 'Left-Back' ? 'selected' : '' %>>Left-Back</option>
+            <option value="Defensive-Midfielder" <%= player.position === 'Defensive-Midfielder' ? 'selected' : '' %>>Defensive-Midfielder</option>
+            <option value="Central-Midfielder" <%= player.position === 'Central-Midfielder' ? 'selected' : '' %>>Central-Midfielder</option>
+            <option value="Attacking-Midfielder" <%= player.position === 'Attacking-Midfielder' ? 'selected' : '' %>>Attacking-Midfielder</option>
+            <option value="Right-Winger" <%= player.position === 'Right-Winger' ? 'selected' : '' %>>Right-Winger</option>
+            <option value="Left-Winger" <%= player.position === 'Left-Winger' ? 'selected' : '' %>>Left-Winger</option>
+            <option value="Left-Striker" <%= player.position === 'Left-Striker' ? 'selected' : '' %>>Left-Striker</option>
+            <option value="Right-Striker" <%= player.position === 'Right-Striker' ? 'selected' : '' %>>Right-Striker</option>
+            <option value="Striker" <%= player.position === 'Striker' ? 'selected' : '' %>>Striker</option>
+          </select>
+        </div>
 
-<%- include('../partials/footer') %>
+        <div class="form-group">
+          <label for="number">Number:</label>
+          <input type="number" name="number" value="<%= player.number %>" placeholder="Number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <input type="number" name="rating" value="<%= player.rating %>" placeholder="Rating" required>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Save">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

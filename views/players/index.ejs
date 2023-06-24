@@ -1,31 +1,56 @@
 <%- include('../partials/header') %>
-  <p>views/players/index</P>
 
-  <div class="body-players-index">
+<div class="body-players-index">
+    <!-- <h2><a href="/players/new">Add new player</a> </h2>  -->
+    <h4 class="add-player-button"><a href="/players/new">Add new player</a></h4>
+
+
     <div class="players" >
       <% players.forEach(player => { %>
-        <ul>
-          <li>
-            <img src="https://www.freeiconspng.com/uploads/adidas-football-png-9.png" alt="Football" class="player-image">
-            <h3><a href="/players/<%=player._id%>"><%=player.name%></a></h3>
-            <br>
-            <a > Number : <%=player.number%></a>
-            <br>
-            <a > Foot : <%=player.foot%></a>
-            <br>
-            <a > Rating : <%=player.rating%></a>
-            <br>
-            <a > Position : <%=player.position%></a>
-            <form action="/players/<%= player._id %>?_method=DELETE" method="POST">
-              <button type="submit">X</button>
-            </form>
-            
-          </li> 
-        </ul>
-        <% });   %>
+      <ul>
+        <li>
+          <img src="https://www.freeiconspng.com/uploads/adidas-football-png-9.png" alt="Football" class="player-image">
+          <h3><a href="/players/<%=player._id%>"><%=player.name%></a></h3>
+          <b><a > Number : <%=player.number%></a></b>
+          <br>
+          <b><a > Foot : <%=player.foot%></a></b>
+          <br>
+          <b><a > Rating : <%=player.rating%></a></b>
+          <br>
+          <b><a > Position : <%=player.position%></a></b>
+          <form action="/players/<%= player._id %>?_method=DELETE" method="POST">
+            <button type="submit" class="red-card-button">
+              <img src='/images/redcard.png' alt="Red Card Icon">
+            </button>
+          </form>
+        </li> 
+      </ul>
+      <%});%>
     </div>
-  <a href="/players/new">Add new player</a>
+
   </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <%- include('../partials/footer') %>

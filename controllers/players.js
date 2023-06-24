@@ -12,6 +12,7 @@ const Player = require('../models/player');
 //This function renders the players to the views/players/index.ejs
 const index = async(req,res)=>{
   const playerDetails = await Player.find({})
+
   res.render('players/index', {
     players: playerDetails
   })
@@ -20,6 +21,7 @@ const index = async(req,res)=>{
 //This function gets triggered when 3000/players/new and renders views/players/new.ejs
 //This is a pair with the controller's create function 
 const newPlayer = async (req,res)=>{
+
   res.render('players/new')
 }
 
