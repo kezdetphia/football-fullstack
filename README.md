@@ -1,5 +1,7 @@
 Football-Fullstack
 
+Try the game by opening this link: https://football-fullstack-95cbf9859a77.herokuapp.com/
+
 Welcome to the Footbal-Fullstack game! In this game, you have the opportunity to create your own dream team 
 of players and customize their attributes to build a strong and formidable squad. Select players from a vast 
 pool of available options and personalize their characteristics to suit your strategy and playing style.
@@ -18,8 +20,6 @@ Technologies Used
 Game Features:
 
     Player Selection: Choose players from a diverse pool of options to build your dream team.
-    Attribute Customization: Personalize the attributes of each player to match your strategy and playing 
-style.
-    Team Management: Manage your team by adding, removing, and editing player attributes.
+    Attribute Customization: Personalize the attributes of each player to match your strategy and playing style.Team Management: Manage your team by adding, removing, and editing player attributes.
     Player Statistics: View detailed statistics and information about each player.
 
