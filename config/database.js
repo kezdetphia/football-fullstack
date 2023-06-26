@@ -1,3 +1,4 @@
+console.log(process.env.DATABASE_URL)
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.DATABASE_URL);
